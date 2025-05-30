@@ -22,7 +22,7 @@ function ScoreInput({score, onChangeScore}: ScoreInputProps) {
         step={1}
         minimumValue={1}
         maximumValue={5}
-        minimumTrackTintColor={colors.PINK_700}
+        minimumTrackTintColor={colors.Orange_600}
         maximumTrackTintColor={colors.GRAY_300}
         thumbTintColor={colors.GRAY_100}
       />

@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import {AuthStackParamList} from '@/navigations/stack/AuthStackNavigator';
 import CustomButton from '@/components/common/CustomButton';
-import {authNavigations} from '@/constants';
+import {authNavigations, colors} from '@/constants';
 
 type AuthHomeScreenProps = StackScreenProps<
   AuthStackParamList,
@@ -33,8 +33,8 @@ function AuthHomeScreen({navigation}: AuthHomeScreenProps) {
             style={styles.logo}
           />
           <View style={styles.header}>
-            <Text style={styles.title}>대충그럴싸한이름</Text>
-            <Text style={styles.subtitle}>맛집 저장용 앱{'\n'}</Text>
+            <Text style={styles.title}>맛집 로그</Text>
+            <Text style={styles.subtitle}>기업연계2{'\n'}</Text>
           </View>
         </View>
 
@@ -69,12 +69,11 @@ const styles = StyleSheet.create({
     width: 128,
     height: 128,
     marginBottom: 20,
-
     resizeMode: 'contain',
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.4)', // 어두운 오버레이
+    backgroundColor: 'rgba(0, 0, 0, 0.5)', // 어두운 오버레이
   },
 
   header: {
@@ -82,16 +81,16 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   title: {
-    fontFamily: 'sans-serif-medium',
-    color: 'white',
-    fontSize: 38,
-    fontWeight: 'bold',
+    fontFamily: 'BagelFatOne-Regular',
+    color: colors.WHITE,
+    fontSize: 60,
+    //fontWeight: 'bold',
     textAlign: 'center',
     flexWrap: 'wrap',
     paddingHorizontal: 10,
   },
   subtitle: {
-    fontFamily: 'monospace',
+    fontFamily: 'BagelFatOne-Regular',
     color: 'white',
     fontSize: 18,
     textAlign: 'center',
